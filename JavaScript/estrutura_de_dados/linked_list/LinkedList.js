@@ -30,10 +30,36 @@ export default class LinkedList {
   }
 
   // inserir um novo elemento em uma posição específica da lista
-  insert(element, position) {}
+  insert(element, index) {
+    if(index >= 0 && index <= this.count) { // {1}
+      const node = new Node(element);
+      if(index === 0) { // adiciona na primeira posição
+        const current = this.head;
+        node.next = current; // {2} 
+        this.head = node;
+      } else {
+        const previous = this.getEelementAt(index - 1); // {3}
+        const current = previous.next; // {4}
+        node.next = current; // {5}
+        previous.next = node; // {6}
+      }
+      this.count++; // atualiza o tamanho da lista
+      return true;
+    }
+    return false; // {7}
+  }
 
   // retorna um elemento que está em uma posição específica da lista, se não estiver, retorna undefined
-  getEelementAt(index) {}
+  getEelementAt(index) {
+    if(index >= 0 && index <= this.count) { // {1} verificando se o index passado como parâmetro é uma posição válida
+      let current = this.head; // {2} inicialização da variável current com o primeiro elemento que é o head, essa aula será usada para fazer iteração pela lista.
+      for(let i = 0; i < index && current != null; i++) { // {3} percorreremos a lista até alcançar o index desejado
+        current = current.next; 
+      }
+      return current; // {4} ao sair do laço o elemento current referênciará o elemento na posição index.
+    }
+    return undefined; // {5} se o index for inválido retornaremos um undefined 
+  }
 
   // remove elemento da lista
   remove(element) {}
@@ -50,11 +76,14 @@ export default class LinkedList {
       if (index === 0) { // {3} vamos remover o primeiro elemento da lista apontando o head para o segundo elemento da lista
         this.head = current.next;
       } else {
-        let previous; // {4} elemento que está antes de current
-        for (let i = 0; i < index; i++) { // {5} vamos iterar pelos nós da lista ligada até chegar na posição desejada
-          previous = current; // {6} faremos uma referência ao elemento que estiver antes de current
-          current = current.next; // {7} a variável current sempre fará referência ao elemento atual da lista que estivermos percorrendo com esse laço
-        }
+        // let previous; // {4} elemento que está antes de current
+        // for (let i = 0; i < index; i++) { // {5} vamos iterar pelos nós da lista ligada até chegar na posição desejada
+        //   previous = current; // {6} faremos uma referência ao elemento que estiver antes de current
+        //   current = current.next; // {7} a variável current sempre fará referência ao elemento atual da lista que estivermos percorrendo com esse laço
+        // }
+        
+        const previous = this.getEelementAt(index - 1);
+        current = previous.next;
         // faz a ligação de previous com o next de current: pula esse elemento para removê-lo
         previous.next = current.next; // {8} remove o nó current ligando o previous.next ao current.next
       }
