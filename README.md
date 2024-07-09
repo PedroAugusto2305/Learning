@@ -6,7 +6,7 @@ Criei esse repositório com a intenção de concentrar todos meus estudos sobre 
 Então mudei minha rota de estudos e segue abaixo a lista do que estou estudando atualmente:
 
 ### Trilha Principal
-- [ ] Python (revisão de conceitos) - **em andamento**;
+- [x] Python (revisão de conceitos);
 - [ ] Álgebra Linear;
 - [ ] Excel;
 - [ ] Estatística;
