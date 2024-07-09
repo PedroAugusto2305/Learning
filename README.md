@@ -2,19 +2,18 @@
 
 ## Objetivos:
 
-Criei esse repositório com a intenção de concentrar todos meus estudos sobre computação, desde desenvolvimento front-end, back-end e arquitetura de software quanto conceitos matemáticos voltados para a computação como o cálculo lambda por exemplo. Este repositório também seguira como um guia para consultas caso seja necessário. 
-Abaixo segue a lista de conteúdos que já estudei, estou estudando e que pretendo estudar:
+Criei esse repositório com a intenção de concentrar todos meus estudos sobre Computação, e Ciência de Dados. Meu objetivo inicial era estudar apenas coisas como desenvolvimento Back-end, Arquitetura de Software e temas semelhantes, porém durante pesquisas surgiu o interesse em mim de me aprofundar em temas como: Machine Learning, Deep Learning, LLMs e temas semelhantes na área de Inteligência Artifícial.
+Então mudei minha rota de estudos e segue abaixo a lista do que estou estudando atualmente:
 
 ### Trilha Principal
-- [ ] JavaScript (revisão de alguns conceitos) - **em andamento**;
-- [ ] Nodejs - **em andamento**;
-- [ ] APIs REST e RESTful;
-- [ ] TypeScript;
-- [ ] Arquitetura de Software;
-- [ ] Programação Funcional;
-- [ ] Golang;
+- [ ] Python (revisão de conceitos) - **em andamento**;
+- [ ] Álgebra Linear;
+- [ ] Excel;
+- [ ] Estatística;
+- [ ] SQL;
+- [ ] Data Visualization;
+- [ ] Machine Learning;
 - [ ] ...
 
 ### Trilha secundária (estudos em paralelo com a trilha principal)
-- [ ] Sistemas Operacionais
-- [ ] Matemática Discreta
+- [ ] Matemática Básica - **em andamento**;
